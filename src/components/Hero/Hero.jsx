@@ -1,9 +1,18 @@
 import React from "react";
 import { Header } from "../Header/Header";
+import bg from "../../assets/images/oman.jpg";
+import bg2 from '../../assets/images/oman2.png';
 
 export const Hero = () => {
   return (
-    <>
+    <div
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
+      }}
+    >
       <Header />
       <div className="flex flex-col items-center justify-center">
         <div className="justify-center px-14 py-5 mt-14 max-w-full text-3xl font-bold text-center text-orange-500 rounded-xl bg-sky-950 leading-[60px] w-[470px] max-md:px-5 max-md:mt-10">
@@ -11,7 +20,7 @@ export const Hero = () => {
           <br />
           بوابتك إلى فرص سلطنة عُمان!
         </div>
-        <div className="mt-10 text-2xl font-semibold leading-10 text-center max-md:max-w-full">
+        <div className="mt-10 text-2xl font-semibold leading-10 text-center max-md:max-w-full text-white">
           احصل على فيزا عُمان من المصدر بدون أي وسيط خلال 24 ساعة.
         </div>
 
@@ -19,6 +28,6 @@ export const Hero = () => {
           قدّم على التأشيرة الآن
         </button>
       </div>
-    </>
+    </div>
   );
 };
