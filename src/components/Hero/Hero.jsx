@@ -15,7 +15,7 @@ export const Hero = () => {
           احصل على فيزا عُمان من المصدر بدون أي وسيط خلال 24 ساعة.
         </div>
 
-        <button className="justify-center items-center px-16 mt-8 mb-44 max-w-full text-lg font-medium leading-10 text-white whitespace-nowrap bg-orange-500 rounded-lg w-[470px] max-md:px-5 max-md:mb-10">
+        <button className="justify-center items-center px-16 mt-8 mb-44 max-w-full text-lg font-medium leading-10 text-white whitespace-nowrap bg-orange-500 rounded-lg w-[470px] max-md:px-5 max-md:mb-10 hover:bg-sky-900">
           قدّم على التأشيرة الآن
         </button>
       </div>
