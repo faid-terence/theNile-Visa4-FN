@@ -3,13 +3,26 @@ import city from "../../assets/images/city-oman.jpg";
 
 export const About = () => {
   return (
-    <div className="flex flex-col justify-center text-2xl font-bold leading-10 text-right text-white capitalize hover:ease-in">
-      <div className="flex overflow-hidden relative flex-col justify-center py-px min-h-[811px] max-md:mr-0.5 max-md:max-w-full">
-        <img
-          loading="lazy"
-          srcSet={city}
-          className="object-cover absolute inset-0 size-full"
-        />
+    <div
+      className="flex flex-col justify-center text-2xl font-bold leading-10 text-right text-white capitalize hover:ease-in"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${city})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transition: "transform 0.3s ease",
+        transform: "scale(1)",
+        overflowX: "hidden",
+      }}
+      onMouseOver={() => {
+        document.getElementById("about").style.transform = "scale(1.1)";
+        document.getElementById("about").style.overflowX = "hidden  ";
+      }}
+      onMouseOut={() => {
+        document.getElementById("about").style.transform = "scale(1)";
+      }}
+      id="about"
+    >
+      <div className="overflow-hidden relative flex-col justify-center py-px min-h-[811px] max-md:mr-0.5 max-md:max-w-full">
         <div className="flex relative flex-col px-20 py-12 w-full max-md:px-5 max-md:max-w-full">
           <img
             loading="lazy"
