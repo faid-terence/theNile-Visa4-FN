@@ -1,13 +1,14 @@
 import React from "react";
 import { Header } from "../Header/Header";
 import bg from "../../assets/images/oman.jpg";
-import bg2 from '../../assets/images/oman2.png';
+import bg2 from "../../assets/images/oman2.png";
+import backgroundImage from "../../assets/images/background.svg";
 
 export const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bg})`,
+        backgroundImage: `linear-gradient(rgba(217, 217, 217, 0.24), rgba(217, 217, 217, 0.24)), url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
@@ -20,7 +21,7 @@ export const Hero = () => {
           <br />
           بوابتك إلى فرص سلطنة عُمان!
         </div>
-        <div className="mt-10 text-2xl font-semibold leading-10 text-center max-md:max-w-full text-white">
+        <div className="mt-10 text-2xl font-bold leading-10 text-center max-md:max-w-full text-white">
           احصل على فيزا عُمان من المصدر بدون أي وسيط خلال 24 ساعة.
         </div>
 

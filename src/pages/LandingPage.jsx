@@ -17,7 +17,7 @@ export const LandingPage = () => {
       <Service />
       <Application />
       <Achievements />
-     <FAQ/>
+      <FAQ />
       <Footer />
     </>
   );

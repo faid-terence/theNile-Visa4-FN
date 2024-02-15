@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import icon from "../../assets/images/icon.png";
 import menuIcon from "../../assets/images/menu.svg";
+import logo from "../../assets/logo.svg";
 
 export const Header = () => {
   const [showNav, setShowNav] = useState(false);
@@ -30,7 +31,7 @@ export const Header = () => {
         alt="Logo"
       />
       {showNav && (
-          <header className="flex flex-col items-end py-7 pr-2.5 pl-14 font-medium text-center bg-orange-500 max-w-[280px]">
+        <header className="flex flex-col items-end py-7 pr-2.5 pl-14 font-medium text-center bg-orange-500 max-w-[280px]">
           <div className="flex gap-3.5 text-base text-white whitespace-nowrap w-[71px]">
             <a href="#" className="self-start mt-2.5">
               رجوع
@@ -45,9 +46,7 @@ export const Header = () => {
           <div className="flex flex-col self-stretch mt-9 text-2xl text-white">
             <form>
               <div className="flex flex-col pr-4 pl-20">
-                <label>
-                  الرئيسية
-                </label>
+                <label>الرئيسية</label>
                 <div className="mt-6">من نحن؟</div>
               </div>
               <div className="flex flex-col px-4 mt-6">
