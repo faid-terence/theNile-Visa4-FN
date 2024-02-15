@@ -1,5 +1,7 @@
 import React from "react";
 import city from "../../assets/images/city-oman.jpg";
+import playIcon from "../../assets/images/play.svg";
+import slogan from "../../assets/images/slogan.svg";
 
 export const About = () => {
   return (
@@ -26,13 +28,13 @@ export const About = () => {
         <div className="flex relative flex-col px-20 py-12 w-full max-md:px-5 max-md:max-w-full">
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7eb1194a67a93f1cee4378a449b6b46422efbce1fe20a800dcc70924e12e9710?"
+            src={playIcon}
             className="self-center mt-64 w-48 max-w-full aspect-square max-md:mt-10"
           />
           <div className="flex gap-5 justify-between items-start mt-44 mr-6 ml-4 max-md:flex-wrap max-md:mt-10 max-md:mr-2.5 max-md:max-w-full">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/02ad70aa9e65ecc35112277abe182b86ffe43918cb26e816f5854c38daa97195?"
+              src={slogan}
               className="self-end mt-9 max-w-full aspect-[5] w-[263px]"
             />
             <div className="flex-auto self-start max-md:max-w-full">

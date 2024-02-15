@@ -1,5 +1,13 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
+import phoneIcon from "../../assets/images/phone.svg";
+import { BiPhoneIncoming } from "react-icons/bi";
+import { BiMessage } from "react-icons/bi";
+import { BiCurrentLocation } from "react-icons/bi";
+import youtubeIcon from "../../assets/images/youtube.svg";
+import instagramIcon from "../../assets/images/instagram.svg";
+import facebookIcon from "../../assets/images/facebook.svg";
+import slogan from "../../assets/images/slogan.svg";
 
 export const Footer = () => {
   return (
@@ -24,24 +32,14 @@ export const Footer = () => {
               <br />
               مسقط الخوير شارع دوحة الادب
             </div>
-            <div className="flex flex-col items-center basis-0">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f42edf9268ebbd858f3206481ae8a7c5b2b5230cdc18b83fc113440c876c1dec?apiKey=adb818a380d442cb937ab642e81f4d54&"
-                className="aspect-square w-[29px]"
-                alt="Logo 1"
-              />
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e74c459734cea6e732398f61701f06c63c9ebdadf7ea9cc4da5c57f40862126?apiKey=adb818a380d442cb937ab642e81f4d54&"
-                className="mt-3.5 aspect-square w-[29px]"
-                alt="Logo 2"
-              />
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcf5cceab295bd38a9674c932b35fd327571271353a2ba34a818bac50cba847?apiKey=adb818a380d442cb937ab642e81f4d54&"
-                className="mt-3.5 aspect-square w-[29px]"
-                alt="Logo 3"
+            <div className="flex flex-col items-end">
+              {" "}
+              <BiPhoneIncoming className="mt-[45px]" color="white" size={30} />
+              <BiMessage className="mt-[10px]" color="white" size={30} />
+              <BiCurrentLocation
+                className="mt-[10px]"
+                color="white"
+                size={30}
               />
             </div>
           </div>
@@ -55,19 +53,19 @@ export const Footer = () => {
           <div className="flex gap-3 mt-10 w-[92px]">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2fb49bcb4d2be8e1f80ec354678d2e59c474d8e3a42bbdca50abce9a3625f06?apiKey=adb818a380d442cb937ab642e81f4d54&"
+              src={youtubeIcon}
               className="flex-1 shrink-0 w-full aspect-square"
               alt="Image 1"
             />
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0681f48339b7683e40b1cddc4fe239aaa4c69732d29041fdfc0cad35c33ec1?apiKey=adb818a380d442cb937ab642e81f4d54&"
+              src={instagramIcon}
               className="flex-1 shrink-0 w-full aspect-[1.04]"
               alt="Image 2"
             />
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b80e8a1b45114496abc3aaefe2f59a176208a2037c9c1130e2778a8e7fde793?apiKey=adb818a380d442cb937ab642e81f4d54&"
+              src={facebookIcon}
               className="flex-1 shrink-0 w-full aspect-square"
               alt="Image 3"
             />
@@ -75,7 +73,7 @@ export const Footer = () => {
           <div className="flex gap-4 mt-4 text-lg font-medium leading-7 text-right text-white whitespace-nowrap max-md:flex-wrap max-md:max-w-full">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ae9f8b06133b26195919750af0258efe8841ff42b6f1d44f431624805b96e646?apiKey=adb818a380d442cb937ab642e81f4d54&"
+              src={slogan}
               className="aspect-[5] w-[301px]"
               alt="Image 4"
             />
@@ -86,3 +84,5 @@ export const Footer = () => {
     </section>
   );
 };
+
+export default Footer;
