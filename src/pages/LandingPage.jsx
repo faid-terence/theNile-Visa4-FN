@@ -6,6 +6,8 @@ import { About } from "../components/About/About";
 import { Service } from "../components/Services/Service";
 import { Achievements } from "../components/Achievements/Achievements";
 import { Application } from "../components/Application/Application";
+import { Accordian, AccordianItem } from "../components/Accordian/Accordian";
+import { FAQ } from "../components/Accordian/FAQ";
 
 export const LandingPage = () => {
   return (
@@ -15,6 +17,7 @@ export const LandingPage = () => {
       <Service />
       <Application />
       <Achievements />
+     <FAQ/>
       <Footer />
     </>
   );
