@@ -1,3 +1,5 @@
+// Application.js
+
 import React, { useState } from "react";
 import VisaSelectorII from "../Files/Visa";
 import serveIcon from "../../assets/images/serve.svg";
@@ -69,7 +71,7 @@ const Application = () => {
         <div className="fixed inset-0 flex items-center justify-center z-10">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
           <div className="relative bg-white p-8 rounded-md">
-            <VisaSelectorII />
+            <VisaSelectorII closeModal={toggleModal} />
           </div>
         </div>
       )}
