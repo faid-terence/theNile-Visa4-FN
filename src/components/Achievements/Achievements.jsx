@@ -4,7 +4,7 @@ import usersIcon from "../../assets/images/users.svg";
 
 export const Achievements = () => {
   return (
-    <div className="flex justify-center items-center px-16 py-11 bg-cyan-800 max-md:px-5">
+    <div className="flex justify-center items-center  px-16 py-11 bg-cyan-800 max-md:px-5">
       <div className="max-w-full w-[664px]">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
