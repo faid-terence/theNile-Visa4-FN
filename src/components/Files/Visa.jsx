@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import closeIcon from "../../assets/images/closeIcon.svg";
+import settingsIcon from "../../assets/images/visaIcon.svg";
 
 const VisaOption = ({ duration, price }) => (
   <div className="flex flex-col w-1/2 max-md:w-full">
@@ -17,12 +19,7 @@ const VisaOption = ({ duration, price }) => (
   </div>
 );
 
-const VisaSelectorII = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const toggleModal = () => {
-    setModalOpen(!modalOpen);
-  };
+const VisaSelectorII = ({ closeModal }) => {
   return (
     <section className="flex flex-col pt-4 pb-9 bg-white rounded-2xl w-full max-w-[700px] mx-auto">
       <header className="flex flex-col pr-4 pl-8 w-full text-center capitalize text-sky-950 max-md:pl-5 max-md:max-w-full">
@@ -36,9 +33,10 @@ const VisaSelectorII = () => {
           </div>
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a05f3cdf15e542432a2a160077259adf71ccbe49b88e7129f5abf85c86e0c98?apiKey=adb818a380d442cb937ab642e81f4d54&"
-            className="aspect-square w-[30px]"
+            src={closeIcon}
+            className="aspect-square w-[30px] cursor-pointer"
             alt="Visa type icon"
+            onClick={closeModal}
           />
         </div>
         <p className="self-end mt-7 mr-8 text-lg font-medium leading-9 whitespace-nowrap max-md:mr-2.5">
@@ -60,7 +58,7 @@ const VisaSelectorII = () => {
           </p>
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6789fbe146f7d432fbca0f243b0c06ab2fcad82d778bc431a36dd9adf56c1d67?apiKey=adb818a380d442cb937ab642e81f4d54&"
+            src={settingsIcon}
             className="w-6 aspect-square"
             alt="Vodafone Cash"
           />
