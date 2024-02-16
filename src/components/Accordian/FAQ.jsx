@@ -25,7 +25,7 @@ export const FAQ = () => {
             </p>
           </AccordianItem>
           <AccordianItem
-            value={1}
+            value={2}
             trigger={
               <>
                 <div className="w-[11px] h-12 bg-sky-950 rounded-[3px]" />
@@ -43,7 +43,7 @@ export const FAQ = () => {
             </p>
           </AccordianItem>
           <AccordianItem
-            value={1}
+            value={3}
             trigger={
               <>
                 <div className="w-[11px] h-12 bg-sky-950 rounded-[3px]" />

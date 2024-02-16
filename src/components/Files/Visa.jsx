@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import closeIcon from "../../assets/images/closeIcon.svg";
 import settingsIcon from "../../assets/images/visaIcon.svg";
 
-const VisaOption = ({ duration, price }) => (
-  <div className="flex flex-col w-1/2 max-md:w-full">
+const VisaOption = ({ duration, price, onClick, isSelected }) => (
+  <div
+    className={`flex flex-col w-1/2 max-md:w-full ${
+      isSelected ? "bg-orange-500" : ""
+    }`}
+    onClick={onClick}
+  >
     <div className="flex flex-col justify-center px-1 py-0.5 w-full text-center capitalize rounded-md border-solid border-[3px] border-[color:var(--Dark-Blue,#103C55)] text-sky-950 max-md:mt-10 max-md:max-w-full">
       <div className="flex flex-col justify-center bg-cyan-800 rounded-md max-md:max-w-full">
-        <div className="flex flex-col px-5 py-3 bg-white rounded-md max-md:max-w-full">
+        <div
+          className={`flex flex-col px-5 py-3 bg-white rounded-md max-md:max-w-full ${
+            isSelected ? "bg-orange-600 text-white" : ""
+          }`}
+        >
           <div className="text-xl font-bold leading-8 whitespace-nowrap max-md:mx-0.5">
             {duration}
           </div>
@@ -20,6 +29,12 @@ const VisaOption = ({ duration, price }) => (
 );
 
 const VisaSelectorII = ({ closeModal }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleVisaOptionClick = (duration) => {
+    setSelectedOption(duration);
+  };
+
   return (
     <section className="flex flex-col pt-4 pb-9 bg-white rounded-2xl w-full max-w-[700px] mx-auto">
       <header className="flex flex-col pr-4 pl-8 w-full text-center capitalize text-sky-950 max-md:pl-5 max-md:max-w-full">
@@ -47,8 +62,22 @@ const VisaSelectorII = ({ closeModal }) => {
       <div className="flex flex-col pr-4 pl-8 mt-9 w-full max-md:pl-5 max-md:max-w-full">
         <div className="max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-            <VisaOption duration="تأشيرة سياحية لمدة 10 أيام" price="950" />
-            <VisaOption duration="تأشيرة سياحية لمدة 30 يوماً" price="2750" />
+            <VisaOption
+              duration="تأشيرة سياحية لمدة 10 أيام"
+              price="950"
+              onClick={() =>
+                handleVisaOptionClick("تأشيرة سياحية لمدة 10 أيام")
+              }
+              isSelected={selectedOption === "تأشيرة سياحية لمدة 10 أيام"}
+            />
+            <VisaOption
+              duration="تأشيرة سياحية لمدة 30 يوماً"
+              price="2750"
+              onClick={() =>
+                handleVisaOptionClick("تأشيرة سياحية لمدة 30 يوماً")
+              }
+              isSelected={selectedOption === "تأشيرة سياحية لمدة 30 يوماً"}
+            />
           </div>
         </div>
         <div className="flex gap-3 justify-between px-1 mt-5 text-sm font-medium leading-9 text-right text-orange-500 whitespace-nowrap max-md:flex-wrap max-md:max-w-full">
