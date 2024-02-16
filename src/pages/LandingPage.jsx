@@ -10,6 +10,7 @@ import { Accordian, AccordianItem } from "../components/Accordian/Accordian";
 import { FAQ } from "../components/Accordian/FAQ";
 import VisaSelector from "../components/Files/Visit";
 import VisaSelectorII from "../components/Files/Visa";
+import AccreditedAgents from "../components/Agents/AccreditedAgents";
 
 export const LandingPage = () => {
   return (
@@ -21,6 +22,7 @@ export const LandingPage = () => {
       <Achievements />
       <FAQ />
       <Footer />
+      <AccreditedAgents/>
     </>
   );
 };
